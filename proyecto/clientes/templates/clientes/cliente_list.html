@@ -6,18 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-
-
-    <h1>Paises</h1>
+    
+    <h1>Listado de Clientes</h1>
     <ul>
-        {% for pais in paises %}
-            <li>{{pais}}</li>
+        {% for cliente in clientes %}
+            <li> Cliente es: {{cliente}}</li>
         {% endfor %}
     </ul>
-    <button><a href="{% url 'clientes:index' %}">Back</a></button>
-    
 
+    <button><a href="{% url 'clientes:index' %}">Back</a></button>
 </body>
 </html>
-
-
