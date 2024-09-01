@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    <h1>Listado de Clientes</h1>
+{% extends 'home/base.html' %}
+
+{% block header %}
+    Listado De clientes
+{% endblock header %}
+
+{% block main %}
+
     <ul>
         {% for cliente in clientes %}
             <li> Cliente es: {{cliente}}</li>
@@ -15,5 +13,6 @@
     </ul>
 
     <button><a href="{% url 'clientes:index' %}">Back</a></button>
-</body>
-</html>
+    
+{% endblock main %}
+
